@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:polyapp/polyapp.dart';
-import 'package:polyapp/polyAppObject.dart';
+import 'package:polyapp/poly_app.dart';
+import 'package:polyapp/poly_app_object.dart';
 
 void main() {
   runApp(const MyApp());
