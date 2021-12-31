@@ -4,7 +4,7 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:http/http.dart';
-import 'package:polyapp/polyAppObject.dart';
+import 'package:polyapp/poly_app_object.dart';
 
 class PolyApp {
   static const MethodChannel _channel = MethodChannel('polyapp');
