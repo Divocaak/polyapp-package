@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - polyapp (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - polyapp (from `.symlinks/plugins/polyapp/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  polyapp:
+    :path: ".symlinks/plugins/polyapp/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  polyapp: cbee3b5c36d37e2fa7103eb03117c821500ecb68
+
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+
+COCOAPODS: 1.11.2
