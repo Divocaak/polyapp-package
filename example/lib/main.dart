@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-
 import 'package:flutter/services.dart';
 import 'package:polyapp/poly_app.dart';
 import 'package:polyapp/poly_app_object.dart';
@@ -17,6 +16,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  late Future<PolyAppObject?> polyAppObject;
+
   String _platformVersion = 'Unknown';
 
   @override
@@ -41,28 +42,18 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
-  late Future<PolyAppObject?> polyAppObject;
-  Color primaryColor = Colors.blue;
-
   @override
   Widget build(BuildContext context) {
     polyAppObject = PolyApp.getOptions("http://localhost/test.php");
     return MaterialApp(
         home: Scaffold(
-            appBar: AppBar(
-                title: const Text('Plugin example app'),
-                backgroundColor: primaryColor),
             body: FutureBuilder<PolyAppObject?>(
                 future: polyAppObject,
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {
-                    Future.delayed(
-                        Duration.zero,
-                        () async => setState(
-                            () => primaryColor = snapshot.data!.primaryColor));
-
                     return Text(
-                        snapshot.data!.devName + ", " + snapshot.data!.devMail);
+                        snapshot.data!.devName + ", " + snapshot.data!.devMail,
+                        style: TextStyle(color: snapshot.data!.primaryColor));
                   } else if (snapshot.hasError) {
                     return const Center(child: Text("někde se stala chyba"));
                   } else {

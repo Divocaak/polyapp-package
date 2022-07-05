@@ -5,3 +5,7 @@
 ## 0.0.2
 
 updated primaryColor name and object type
+
+## 0.0.3
+
+launch error fixed

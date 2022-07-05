@@ -1,27 +1,28 @@
 name: polyapp
 description: General functions and objects commonly used in PolyWebCZ company
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/Divocaak/polyapp-package
 
 environment:
-  sdk: ">=2.15.1 <3.0.0"
+  sdk: ">=2.17.1 <3.0.0"
   flutter: ">=2.5.0"
 
 dependencies:
   flutter:
     sdk: flutter
+  plugin_platform_interface: ^2.0.2
   http: ^0.13.4
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^1.0.0
+  flutter_lints: ^2.0.0
 
 flutter:
   plugin:
     platforms:
       android:
         package: cz.polyweb.polyapp
-        pluginClass: PolyAppPlugin
+        pluginClass: PolyappPlugin
       ios:
-        pluginClass: PolyAppPlugin
+        pluginClass: PolyappPlugin
