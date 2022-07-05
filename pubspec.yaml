@@ -1,6 +1,6 @@
 name: polyapp
-description: A new flutter plugin project.
-version: 0.0.1
+description: General functions and objects commonly used in PolyWebCZ company
+version: 0.0.2
 homepage: https://github.com/Divocaak/polyapp-package
 
 environment:
