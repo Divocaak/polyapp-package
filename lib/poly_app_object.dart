@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class PolyAppObject {
-  String primaryColorString;
+  Color primaryColor;
   String devName;
   String devMail;
 
-  PolyAppObject(this.primaryColorString, this.devName, this.devMail);
+  PolyAppObject(this.primaryColor, this.devName, this.devMail);
 
-  Color primaryColorHex() {
+  static Color primaryColorHex(String primaryColorString) {
     final buffer = StringBuffer();
     if (primaryColorString.length == 6 || primaryColorString.length == 7) {
       buffer.write('ff');
@@ -17,6 +17,6 @@ class PolyAppObject {
     return Color(int.parse(buffer.toString(), radix: 16));
   }
 
-  factory PolyAppObject.fromJson(Map json) =>
-      PolyAppObject(json["primaryColor"], json["devName"], json["devMail"]);
+  factory PolyAppObject.fromJson(Map json) => PolyAppObject(
+      primaryColorHex(json["primaryColor"]), json["devName"], json["devMail"]);
 }
