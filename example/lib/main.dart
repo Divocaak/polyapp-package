@@ -58,8 +58,8 @@ class _MyAppState extends State<MyApp> {
                   if (snapshot.hasData) {
                     Future.delayed(
                         Duration.zero,
-                        () async => setState(() =>
-                            primaryColor = snapshot.data!.primaryColorHex()));
+                        () async => setState(
+                            () => primaryColor = snapshot.data!.primaryColor));
 
                     return Text(
                         snapshot.data!.devName + ", " + snapshot.data!.devMail);
