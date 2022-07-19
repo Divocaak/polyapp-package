@@ -1,3 +1,7 @@
+source 'https://github.com/Zewo/HTTP.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+
 # Uncomment this line to define a global platform for your project
 # platform :ios, '9.0'
 
@@ -11,6 +15,8 @@ project 'Runner', {
 }
 
 def flutter_root
+  pod "http", :git => 'https://github.com/Zewo/HTTP.git'
+
   generated_xcode_build_settings_path = File.expand_path(File.join('..', 'Flutter', 'Generated.xcconfig'), __FILE__)
   unless File.exist?(generated_xcode_build_settings_path)
     raise "#{generated_xcode_build_settings_path} must exist. If you're running pod install manually, make sure flutter pub get is executed first"

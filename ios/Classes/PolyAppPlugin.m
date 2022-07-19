@@ -10,6 +10,6 @@
 
 @implementation PolyAppPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
-  [SwiftPolyAppPlugin registerWithRegistrar:registrar];
+    [SwiftPolyappPlugin registerWithRegistrar:registrar];
 }
 @end
